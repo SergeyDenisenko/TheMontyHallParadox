@@ -1,10 +1,11 @@
 package my.homework;
 
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
-import org.apache.commons.math3.*;
 
 /**
  * Класс игры
@@ -153,6 +154,6 @@ public class Game {
         for (int v : log.values()) {
             descriptiveStatistics.addValue(v);
         }
-        System.out.printf("Коэффициент угадывания: %d\n", descriptiveStatistics.getMean());
+        System.out.printf("Коэффициент угадывания: %.3f\n", descriptiveStatistics.getMean());
     }
 }
